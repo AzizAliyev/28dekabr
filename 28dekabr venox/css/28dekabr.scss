@@ -1,0 +1,130 @@
+.nuv{
+    background: black;
+    padding: 36px;
+    
+    .left{
+        a{
+            color: white;
+            font-size: 30px;
+        }
+    }
+    .right{
+        .a1{
+            color: white;
+            font-size: 15px;
+            margin: 10px 10px;
+            position: relative;
+            &:hover{
+                &::before{
+                    width: 100%;
+                }
+            }
+            &::before{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            background: red;
+            width: 0;
+            height: 2px;
+            transition: 2s;
+
+            }
+
+        }
+        .a1:nth-child(1){
+            &::before{
+                width: 30%;
+            }
+        }
+        i{
+            color: white;
+        }
+    }
+}
+
+
+.nuv1{
+    display: none;
+}
+
+
+
+
+
+@media (max-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+    .nuv1{
+        padding: 12px;
+        background: black;
+        display: block;
+        .left{
+            a{
+                color: white;
+                font-size: 17px;
+            }
+            
+        }
+        .right{
+            i{
+                color: white;
+                font-size: 17px;
+            }
+        }
+    }
+    .nuv{
+        display: none;
+    }
+  }
+
+
+  .second{
+      background: black;
+      .word{
+        font-size: 24px;
+        padding: 7rem 0 0 4rem;
+          h2{
+            padding: 38px;
+            font-size: 2rem;
+            color: white;
+          }
+          hr{
+            padding: 32px;
+            background:red;
+            width: 42px;
+            padding: 0;
+            margin: 0;
+          }
+      
+    }
+    .bt1{
+
+        &:hover{
+            z-index: 10;
+            &::before{
+              z-index: -10;
+                width: 100%;
+            }
+        }
+        position: relative;
+        &::before{
+            z-index: 1;
+            transition: .4s linear;
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 100%;
+            top:0 ;
+            left: 0;
+            background: #E9204F;
+
+        }
+    }
+
+      }
+
+
+
+  
